@@ -12,30 +12,39 @@
             <a href="#"><img src="logo.png" class="logo"></a>
             <div class="toggleMenu" onclick="menuToggle();"></div>
             <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">What's New</a></li>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Autores</a></li>
                 <li><a href="#">Newsletter</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Acceder</a></li>
             </ul>
         </header>
         <div class="content">
-            <div class="textBox">
-                <h2>That's What<br><span>I like</span></h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates et, velit unde id temporibus suscipit quae omnis tempore saepe doloribus ut modi iure fugit doloremque alias quia est atque ullam.
-                    
-                </p>
-                <a href="#">View All Products</a>
-            </div>
             <div class="imgBox">
-                <img src="pepsi001.png" class="pepsi">
+                <img src="libro2.jpg" class="pepsi">
+            </div>
+            <div class="textBox">
+                <h2>Chris Pueyo</h2>
+                <h3 class="title">El chico de las estrellas<br><!--<span>I like</span>--></h3>
+                <p class="sinopsis">
+                    Érase un niño que jamás vivió más de dos años seguidos en una misma casa, por lo que decidió pintar las paredes de todas sus habitaciones con estrellas. Su rechazo al colegio y una familia inusual le empujarán a emprender un viaje donde no todo serán constelaciones y pedirle deseos a la luna.
+                </p>
+                <a href="#">Donde comprarlo</a>
             </div>
         </div>
         <ul class="thumb">
-            <li><img src="pepsi001.png" onclick="imgSlider('pepsi001.png'); changeBgColor('#0062be')"></li>
-            <li><img src="pepsi002.png" onclick="imgSlider('pepsi002.png'); changeBgColor('#e60c2c')"></li>
-            <li><img src="pepsi003.png" onclick="imgSlider('pepsi003.png'); changeBgColor('#1e1e1e')"></li>
+            <li><img src="libro2.jpg" onclick="imgSlider('libro2.jpg'); 
+            changeBgColor('linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)'); 
+            changeTittle('El chico de las estrellas');
+            changeResume('Érase un niño que jamás vivió más de dos años seguidos en una misma casa, por lo que decidió pintar las paredes de todas sus habitaciones con estrellas. Su rechazo al colegio y una familia inusual le empujarán a emprender un viaje donde no todo serán constelaciones y pedirle deseos a la luna..')"></li>
+            <li><img src="libro1.jpg" onclick="imgSlider('libro1.jpg'); 
+            changeBgColor('linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(166,149,97,1) 50%, rgba(242,231,152,1) 100%)'); 
+            changeTittle('Aqui dentro siempre llueve');
+            changeResume('Nadie que te haga sentir pequeño merece verte crecer. Aquí dentro siempre llueve, pues descubrí que la felicidad está salpicada de tristeza hasta que uno se tiende una mano y encuentra el valor suficiente para salir por la ventana de su propio pecho.')"></li>
+            <li><img src="libro3.jpg" onclick="imgSlider('libro3.jpg'); 
+                changeBgColor('linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(194,94,156,1) 50%, rgba(255,226,249,1) 100%)'); 
+                changeTittle('La abuela');
+                changeResume('Me crio, me educó y me soltó; ninguna de las tres tarea fácil. Así que mi abuela es mi madre. Todo comenzó cuando mencionó lo de su testamento, aquella fue la chispa que encendió estas páginas.')"></li>
         </ul>
         <ul class="sci">
             <li><a href="#"><img src="facebook.png"></a></li>
@@ -50,6 +59,14 @@
         function changeBgColor(color){
             const sec = document.querySelector('.sec');
             sec.style.background = color;
+        }
+        function changeTittle(text){
+            const tittle = document.querySelector('.tittle');
+            document.querySelector('.title').textContent=text;
+        }
+        function changeResume(text){
+            const resume = document.querySelector('.sinopsis');
+            document.querySelector('.sinopsis').textContent=text;
         }
         function menuToggle(){
             const toggleMenu = document.querySelector('.toggleMenu');

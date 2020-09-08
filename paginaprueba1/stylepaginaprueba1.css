@@ -14,10 +14,11 @@ section
     width: 100%;
     min-height: 100vh;
     padding: 100px;
+    padding-left: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #0062be;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     transition: 0.5s;
 }
 
@@ -26,11 +27,13 @@ header
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    display: flex;
+    width: 8%;
+    height: 100vh;
+    padding: 20px 10px;
+    display: inline-block;
     justify-content: space-between;
     align-items: center;
+    background: rgba(255, 255, 255, 0.1)
 }
 
 header .logo
@@ -44,7 +47,8 @@ header .logo
 header ul
 {
     position: relative;
-    display: flex;
+    display: inline-block;
+    transform: translateY(20vh);
 }
 
 header ul li
@@ -54,11 +58,27 @@ header ul li
 
 header ul li a
 {
-    display: inline-block;
+    display: block;
     color: #fff;
     font-weight: 400;
-    margin-left: 40px;
     text-decoration: none;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+header ul li a:hover
+{
+    color: #101010;
+    background: #fff;
+}
+
+h2
+{
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 4em;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .content
@@ -76,13 +96,19 @@ header ul li a
     max-width: 600px;
 }
 
-.content .textBox h2
+.content .textBox h3
 {
     color: #fff;
-    font-size: 4em;
+    font-size: 3em;
     line-height: 1.5em;
     font-weight: 900;
+}
+
+.content .textBox h2
+{
+    color:#fff;
     text-transform: uppercase;
+    font-size: 4em;
 }
 
 .content .textBox h2 span
@@ -154,13 +180,12 @@ header ul li a
 .sci
 {
     position: absolute;
-    top: 50%;
+    top: 0;
     right: 30px;
     transform: translateY(-50);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
 }
 
 .sci li
