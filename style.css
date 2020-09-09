@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background: #091921;
+    min-height: 100vh;
+}
+
+header
+{
+    min-height: 100vh;
+    width: 5%;
+    margin-left: 1%;
+    padding-top: 1%;
+}
+
+header a img
+{
+    width: 100%;
+}
+
+header ul
+{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+    list-style: none;
+}
+
+header ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 4px solid #091921;
+    margin-bottom: 15px;
+    transition: box-shadow .3s;
+    box-shadow: 0 -15px 15px rgba(0, 0, 0, 0.3),
+                inset 0 -15px 15px rgba(0, 0, 0, 0.3),
+                0 15px 15px rgba(255, 255, 255, 0.05),
+                inset 0 15px 15px rgba(255, 255, 255, 0.05);
+}
+
+header ul li a:hover
+{
+    border: 0;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05),
+    inset 0 0 15px rgba(255, 255, 255, 0.05),
+    0 0px 15px rgba(0, 0, 0, 0.3),
+    inset 0 0px 15px rgba(0, 0, 0, 0.3);
+}
