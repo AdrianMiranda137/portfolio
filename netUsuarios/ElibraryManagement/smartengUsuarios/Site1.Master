@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="smartengUsuarios.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Smarteng</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+
+    <script src="bootstrap/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/companysignup.js"></script>
+    <script src="js/usersignup.js"></script>
+    <script src="js/newentrance.js"></script>
+    <script src="js/Chart.js"></script>
+    <script src="js/modalPage.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="menuprincipal">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="imgs/logoblanco.png" width="auto" height="30" />
+                </a> 
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="homepage.aspx">Inicio</a>
+                        </li>
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link">Servicios</a>
+                            <div class="dropdown-content">
+                              <a href="services.aspx?service=1">Desarrollo de software</a>
+                              <a href="services.aspx?service=2">Manufactura</a>
+                              <a href="services.aspx?service=3">Capacitación y cursos</a>
+                              <a href="services.aspx?service=4">Sorteo de calidad</a>
+                            </div>
+                          </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="aboutus.aspx">Nosotros</a>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkContact" runat="server" data-toggle="modal" data-target="#exampleModal" OnClientClick="modalPage('contact.aspx')">Contacto</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Residentes</a>
+                        </li>
+                    </ul>
+ 
+                    <ul class="navbar-nav menuSecundario">
+                        <li class="nav-item active menuSecundarioItem">
+                            <asp:LinkButton class="nav-link" ID="LinkPerfil" runat="server" OnClick="LinkPerfil_Click" Visible="False">Perfil</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active menuSecundarioItem">
+                            <asp:LinkButton class="nav-link" ID="LinkSignup" runat="server" data-toggle="modal" data-target="#exampleModal" OnClientClick="login()" Visible="False">Iniciar sesión</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active menuSecundarioItem">
+                           <asp:LinkButton class="nav-link" ID="LinkLiderSU" runat="server" data-toggle="modal" data-target="#exampleModal" OnClientClick="usersignup()" Visible="False">Nuevo empleado</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active menuSecundarioItem">
+                            <asp:LinkButton class="nav-link" ID="LinkEmpresaSU" runat="server" data-toggle="modal" data-target="#exampleModal" OnClientClick="companysignup()"  Visible="False">Nueva empresa</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active menuSecundarioItem">
+                            <asp:LinkButton class="nav-link" ID="LinkEmpleadosAdmin" runat="server" OnClick="LinkEmpleadosAdmin_Click" Visible="False">Empleados</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active menuSecundarioItem">
+                            <asp:LinkButton class="nav-link" ID="LinkEmpresasAdmin" runat="server" OnClick="LinkEmpresasAdmin_Click" Visible="False">Empresas</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active menuSecundarioItem">
+                            <asp:LinkButton class="nav-link" ID="LinkProyectosAdmin" runat="server" OnClick="LinkProyectosAdmin_Click" Visible="False">Proyectos</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active menuSecundarioItem">
+                            <asp:LinkButton class="nav-link" ID="LinkLO" runat="server" OnClick="LinkLO_Click" Visible="False">Salir</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Main Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+         <!-- Footer -->
+        <footer>
+            <div id="footer1">
+                <ul>
+                    <li class="nav-item active">
+                         <a>Smarteng &copy | </a> <a>En proceso</a> <img src="imgs/iso9001.png"/>
+                        </li>
+                    <!--<li class="nav-item active">
+                            <a>Smarteng &copy</a>
+                        </li>-->
+                </ul>
+            </div>
+        </footer>
+        <!-- ./Footer -->
+ 
+    </form>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content" >
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="contenidoModal">
+               
+          </div>  
+        </div>
+    </div>
+   </div>
+
+</body>
+</html>

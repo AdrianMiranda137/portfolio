@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open indexpaginaprueba1.html",
-            "file": "c:\\Users\\HP\\Documents\\AM\\pagina\\indexpaginaprueba1.html"
+            "file": "paginaprueba2/paginaprueba2.html"
         }
     ]
 }
