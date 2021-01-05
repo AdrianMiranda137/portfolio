@@ -7,23 +7,143 @@
     <link rel="stylesheet" href="style.css" class="style">
 </head>
 <body>
+    <div class="toggleMenu" onclick="menuToggle();"></div>
+    <nav class="main-menu navigation">
+        <ul>
+            <li>
+                <a href="#" onclick="Modal()">
+                    <img src="images/usuario.png" class="fa fa-2x">
+                    <span class="nav-text">
+                        Mi Cuenta de Usuario
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="#" onclick="Modal()">
+                    <img src="images/inversiones.png" class="fa fa-2x">
+                    <span class="nav-text">
+                        Invertir
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a href="#" onclick="Modal()">
+                    <img src="images/donar3.png" class="fa fa-2x">
+                    <span class="nav-text">
+                        Causas sociales
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a href="#" onclick="Modal()">
+                    <img src="images/cartera.png" class="fa fa-2x">
+                    <span class="nav-text">
+                        Mi cartera<br>
+                        Saldo: $0.00
+                    </span>
+                </a>
+               
+            </li>
+            <li>
+                <a href="#" onclick="Modal()">
+                    <img src="images/cuentas.png" class="fa fa-2x">
+                    <span class="nav-text">
+                        Mis cuentas de inversión
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="Modal()">
+                    <img src="images/como_funciona.png" class="fa fa-2x">
+                    <span class="nav-text">
+                       ¿Cómo funciona Río Económico?
+                    </span>
+                </a>
+            </li>
+            <li>
+               <a href="#" onclick="Modal()">
+                    <img src="images/conocenos.png" class="fa fa-2x">
+                    <span class="nav-text">
+                        Conócenos
+                    </span>
+                </a>
+            </li>
+            <li>
+               <a href="#" onclick="Modal()">
+                <img src="images/herramientas.png" class="fa fa-2x">
+                    <span class="nav-text">
+                        Herramientas para ganar
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="Modal()">
+                    <img src="images/creditos.png" class="fa fa-2x">
+                    <span class="nav-text">
+                        Creditos: Capitalización sin deuda
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="Modal()">
+                    <img src="images/blog.png" class="fa fa-2x">
+                     <span class="nav-text">
+                         Articulos/Blog
+                     </span>
+                 </a>
+             </li> 
+             
+            <li>
+                <a href="#" onclick="Modal()">
+                    <img src="images/ayuda.png" class="fa fa-2x">
+                     <span class="nav-text">
+                         Ayuda
+                     </span>
+                 </a>
+             </li> 
+
+             <li>
+                <a href="#" onclick="Modal()">
+                    <img src="images/legal.png" class="fa fa-2x">
+                     <span class="nav-text">
+                         Aspectos Legales
+                     </span>
+                 </a>
+             </li> 
+
+             <li>
+                <a href="#" class="myBtn">
+                 <img src="images/salir.png" class="fa fa-2x">
+                     <span class="nav-text">
+                         Salir
+                     </span>
+                 </a>
+             </li> 
+        </ul>
+
+        <ul class="logout">
+             
+        </ul>
+    </nav>
+
     <section class="banner">
         <header>
-            <a href="" class="logo">LOGOTYPE</a>
-            <div class="toggle"></div>
+            <a href=""><img src="images/logo.png" alt="" ></a>
         </header>
         <img src="images/bg.jpg">
         <div class="content" data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">
-            <h2>Sucess by Design</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero a labore tempora vel doloribus voluptatibus rerum quia nam, esse dignissimos modi reprehenderit enim dicta sint inventore tempore, explicabo alias quidem.
-            </p>
+            <h2>Recupera</h2>
+            <h1>10 veces</h1>
+            <h2>Tu inversion</h2>
         </div>
     </section>
 
     <section class="about">
         <div class="contentBx">
-            <h2 class="heading" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:500px;">About Us</h2>
+            <h2 class="heading" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:500px;">Nosotros</h2>
             <p class="text" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-500px;">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
@@ -32,7 +152,7 @@
     </section>
 
     <section class="services">
-        <h2 class="heading" data-center-center="opacity:1;right:0;" data-0-bottom="opacity:1;right:500px;">Our services</h2>
+        <h2 class="heading" data-center-center="opacity:1;right:0;" data-0-bottom="opacity:1;right:500px;">Causas sociales</h2>
         <p class="text" data-center-center="opacity:1;right:0;" data-0-bottom="opacity:1;right:-500px;">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora praesentium natus laborum vero nulla molestias nemo corrupti dolorum, earum dignissimos corporis minima quod ipsum labore facilis velit. Accusantium, rerum nihil.
         </p>
@@ -40,19 +160,19 @@
             <div class="serviceBx" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">
                 <div>
                     <img src="images/icon1.png">
-                    <h2>Service 1</h2>
+                    <h2>Asociación 1</h2>
                 </div>   
             </div>
             <div class="serviceBx" data-center-center="opacity:1;bottom:0;" data-0-bottom="opacity:0;bottom:-400px;">
                 <div>
                     <img src="images/icon2.png">
-                    <h2>Service 2</h2>
+                    <h2>Asociación 2</h2>
                 </div>   
             </div>
             <div class="serviceBx" data-center-center="opacity:1;right:0;" data-0-bottom="opacity:0;right:-400px;">
                 <div>
                     <img src="images/icon3.png">
-                    <h2>Service 3</h2>
+                    <h2>Asociación 3</h2>
                 </div>   
             </div>
         </div>
@@ -60,7 +180,7 @@
 
     <section class="technology">
         <div class="contentBx" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">
-            <h2 class="heading">Technology</h2>
+            <h2 class="heading">Únete a nuestra comunidad</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, sunt. Deserunt eum reiciendis laboriosam corporis quam eaque vitae nobis, totam illum voluptates ratione cumque illo nesciunt sunt sapiente provident odit.</p>
         </div>
         <div class="imgBx" data-center-center="opacity:1;right:0;" data-0-bottom="opacity:0;right:-400px;">
@@ -68,64 +188,6 @@
         </div>
     </section>
 
-    <section class="client">
-        <h2 class="heading" data-center-center="opacity:1;top:0;" data-0-bottom="opacity:0;top:-100px;">Our Client</h2>
-        <p class="text" data-center-center="opacity:1;bottom:0;" data-0-bottom="opacity:0;bottom:-100px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, omnis quam illum, impedit consequatur ad tenetur esse provident assumenda atque excepturi similique repellat deserunt adipisci vitae. Tenetur vero sit deserunt.</p>
-        <div class="imgBx">
-            <img src="images/brand1.png" data-center-center="top:0;" data-0-bottom="top:100px;">
-            <img src="images/brand2.png" data-center-center="top:0;" data-0-bottom="top:150px;">
-            <img src="images/brand3.png" data-center-center="top:0;" data-0-bottom="top:200px;">
-            <img src="images/brand4.png" data-center-center="top:0;" data-0-bottom="top:250px;">
-        </div>
-    </section>
-
-    <section class="testimonials">
-        <h2 class="heading">Opinions</h2>
-        <div class="container">
-            <div class="contentBx" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem tempore neque, facilis modi provident inventore perferendis incidunt molestiae minima totam. Error neque nam, hic atque eius labore recusandae dolor exercitationem?</p>
-                    <h3>Someone</h3>
-                </div>
-            </div>
-            <div class="contentBx" data-center-center="opacity:1;right:0;" data-0-bottom="opacity:0;right:-400px;">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem tempore neque, facilis modi provident inventore perferendis incidunt molestiae minima totam. Error neque nam, hic atque eius labore recusandae dolor exercitationem?</p>
-                    <h3>Someone</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact">
-        <div data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">
-        <h2 class="heading">Contact us</h2>
-        <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum corrupti perferendis commodi a, sit minima praesentium ea asperiores omnis, ipsum excepturi numquam repellendus laudantium recusandae voluptates, vel architecto aspernatur doloremque.</p>
-    </div>
-    </section>
-
-    <section class="about">
-        <div class="contentBx redbg">
-            <div class="form" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">
-                <div class="inputBx">
-                    <input type="text" name="" placeholder="Name">
-                </div>
-                <div class="inputBx">
-                    <input type="text" name="" placeholder="Email">
-                </div>
-                <div class="inputBx">
-                    <input type="text" name="" placeholder="Phone">
-                </div>
-                <div class="inputBx">
-                    <textarea placeholder="Message"></textarea>
-                </div>
-                <div class="inputBx">
-                    <input type="submit" name="" value="Send">
-                </div>
-            </div>
-        </div>
-        <div class="imgBx2"></div>
-    </section>
 
     <section class="footer">
         <p>Brand &copy;</p>

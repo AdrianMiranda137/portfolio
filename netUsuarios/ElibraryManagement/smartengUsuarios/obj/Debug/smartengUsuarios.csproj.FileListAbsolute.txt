@@ -58,3 +58,6 @@ C:\Users\HP\Documents\SmartEng\elibraryManagement\smartengUsuarios\obj\Debug\sma
 C:\Users\HP\Documents\SmartEng\elibraryManagement\smartengUsuarios\obj\Debug\smartengUsuarios.dll
 C:\Users\HP\Documents\SmartEng\elibraryManagement\smartengUsuarios\obj\Debug\smartengUsuarios.pdb
 C:\Users\HP\Documents\SmartEng\ElibraryManagement\smartengUsuarios\obj\Debug\smartengUsuarios.csproj.ResolveComReference.cache
+C:\Users\HP\Documents\AM\pagina\netUsuarios\ElibraryManagement\smartengUsuarios\obj\Debug\smartengUsuarios.csprojAssemblyReference.cache
+C:\Users\HP\Documents\AM\pagina\netUsuarios\ElibraryManagement\smartengUsuarios\obj\Debug\smartengUsuarios.dll
+C:\Users\HP\Documents\AM\pagina\netUsuarios\ElibraryManagement\smartengUsuarios\obj\Debug\smartengUsuarios.pdb

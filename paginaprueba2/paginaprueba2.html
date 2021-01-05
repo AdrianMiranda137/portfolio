@@ -27,6 +27,69 @@
             <a href="#about" class="btn">Formación</a>
         </div>
     </section>
+    <section>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.conekta.io/js/latest/conekta.js"></script>
+        <script type="text/javascript" >
+            Conekta.setPublicKey('key_KJysdbf6PotS2ut2');
+          
+            var conektaSuccessResponseHandler = function(token) {
+              console.log(token.id);
+            };
+
+            var conektaErrorResponseHandler = function(response) {
+              var $form = $("#card-form");
+              $form.find(".card-errors").text(response.message_to_purchaser);
+              $form.find("button").prop("disabled", false);
+            };
+          
+            //jQuery para que genere el token después de dar click en submit
+            $(function () {
+              $("#card-form").submit(function(event) {
+                event.preventDefault();
+                var $form = $(this);
+                // Previene hacer submit más de una vez
+                //$form.find("button").prop("disabled", true);
+                //Conekta.Token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
+                console.log(Conekta.card.validateNumber(5412345678901234));
+                return false;
+              });
+            });
+          </script>
+
+        <form action="" method="POST" id="card-form">
+            <span class="card-errors"></span>
+            <div>
+            <label>
+                <span>Nombre del tarjetahabiente</span>
+                <input type="text" size="20" data-conekta="card[name]" value="Prueba Uno">
+            </label>
+            </div>
+            <div>
+            <label>
+                <span>Número de tarjeta de crédito</span>
+                <input type="text" size="20" data-conekta="card[number]" value="4831123456789012">
+            </label>
+            </div>
+            <div>
+            <label>
+                <span>CVC</span>
+                <input type="text" size="4" data-conekta="card[cvc]" value="123">
+            </label>
+            </div>
+            <div>
+            <label>
+                <span>Fecha de expiración (MM/AAAA)</span>
+                <input type="text" size="2" data-conekta="card[exp_month]" value="12">
+            </label>
+            <span>/</span>
+            <input type="text" size="4" data-conekta="card[exp_year]" value="2030">
+            </div>
+            <button type="submit">Crear token</button>
+        </form>
+
+        </section>
     <section class="about" id="about">
         <div class="heading">
             <h2>Formación</h2>
